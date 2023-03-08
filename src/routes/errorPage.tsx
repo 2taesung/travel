@@ -1,9 +1,8 @@
 import { useRouteError } from "react-router-dom";
 
 export default function ErrorPage() {
-  // 이거 해결 방법을 ....
+  // 이 any 해결 방법은 ...?
   const error: any = useRouteError();
-  console.error(error);
 
   return (
     <div id="error-page">

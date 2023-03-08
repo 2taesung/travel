@@ -1,9 +1,10 @@
-import data from '../data/products';
-import Product from '../types/Product';
+import data from '../data/travels';
+import Travel from '../types/Travel';
 import tableHeadDisplay from '../data/tableHeadDisplay';
+import TravelRow from '../components/TravelRow';
 
 export default function Root() {
-  const products: Product[] = data;
+  const travels: Travel[] = data;
   return (
     <>
       <h1>상품 리스트</h1>
@@ -11,7 +12,7 @@ export default function Root() {
         <thead>
           <tr>
             {
-              Object.keys(products[0]).map((el, i) => {
+              Object.keys(travels[0]).map((el, i) => {
                 return (
                   <th
                     key={el}
@@ -27,10 +28,8 @@ export default function Root() {
             <td>Doe</td>
           </tr>
           {
-            products.map((el, i) => {
-              return (
-                <tr></tr>
-              )
+            travels.map((el) => {
+              return <TravelRow key={el.idx} travel={el}/>
             })
           }
         </tbody>

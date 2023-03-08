@@ -1,3 +1,4 @@
+// jsdoc으로 하나 만들면 좋을듯
 // {
 // 	"idx": "상품 고유 번호",
 // 	"name": "상품 제목",
@@ -8,7 +9,7 @@
 // 	"maximumPurchases": "개인이 구매할 수 있는 최대 상품 갯수",
 // 	"registrationDate": "상품 등록 시간"
 // }
-const products = [
+const travels = [
 	{
 		"idx": 0,
 		"name": "서울",
@@ -31,4 +32,4 @@ const products = [
 	},
 ]
 
-export default products;
+export default travels;

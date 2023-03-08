@@ -1,4 +1,4 @@
-type Product = {
+type Travel = {
   idx: number,
   name: string,
   mainImage: string,
@@ -9,4 +9,4 @@ type Product = {
   registrationDate: string,
 }
 
-export default Product;
+export default Travel;
