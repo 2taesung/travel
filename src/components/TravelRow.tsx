@@ -41,7 +41,7 @@ export default function TravelRow({travel}: {travel: Travel}) {
               onOpen();
               console.log(travel.idx)
               if (localStorage.getItem("cart")) {
-                const newCart = new Array(localStorage.getItem("cart"));
+                const newCart = JSON.parse(localStorage.getItem("cart") || '');
                 newCart.push(String(travel.idx));
                 localStorage.setItem("cart", JSON.stringify(newCart))
               } else {
