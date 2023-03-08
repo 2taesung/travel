@@ -7,6 +7,8 @@ import {
 import './index.css'
 import Root from "./routes/root";
 import ErrorPage from "./routes/errorPage";
+import Cart from './components/Cart';
+import { ChakraProvider } from '@chakra-ui/react'
 
 const router = createBrowserRouter([
   {
@@ -14,10 +16,17 @@ const router = createBrowserRouter([
     element: <Root/>,
     errorElement: <ErrorPage />
   },
+  {
+    path: "/cart",
+    element: <Cart/>,
+    errorElement: <ErrorPage />
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ChakraProvider>
+      <RouterProvider router={router} />
+    </ChakraProvider>
   </React.StrictMode>,
 )
